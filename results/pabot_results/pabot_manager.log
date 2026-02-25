@@ -1,0 +1,18 @@
+[INFO]    Initialized logging in results/pabot_results
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 started.
+[DEBUG]   Storing .pabotsuitenames file
+[DEBUG]   2026-02-25 11:12:10.304075 [PID:17] [0] [ID:0] EXECUTING Tests.Tests.Login Test
+[DEBUG]   2026-02-25 11:12:15.383046 [PID:17] [0] [ID:0] still running Tests.Tests.Login Test after 5.0s
+[INFO]    2026-02-25 11:12:19.088445 [PID:17] [0] [ID:0] PASSED Tests.Tests.Login Test in 8.7 seconds
+[INFO]    1 tests, 1 passed, 0 failed, 0 skipped.
+[INFO]    ===================================================
+[INFO]    Output:  /tests/results/output.xml
+[INFO]    Log:     /tests/results/log.html
+[INFO]    Report:  /tests/results/report.html
+[DEBUG]   Finalizing Pabot execution...
+[DEBUG]   Stopping PabotLib process
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 stopped.
+[DEBUG]   PabotLib process stopped
+[INFO]    Total testing: 8.69 seconds
+[INFO]    Elapsed time:  11.32 seconds
+[DEBUG]   Logs flushed successfully.

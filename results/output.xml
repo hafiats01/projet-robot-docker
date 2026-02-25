@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.4.1 (Python 3.9.25 on linux)" generated="2026-02-25T11:12:19.268979" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/tests">
+<suite id="s1-s1" name="Tests" source="/tests/tests">
+<suite id="s1-s1-s1" name="Login Test" source="/tests/tests/login_test.robot">
+<test id="s1-s1-s1-t1" name="Connexion Reussie a The-Internet" line="19">
+<kw name="Ouvrir Chrome Pour Docker">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-25T11:12:12.741619" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x73e8756d3610&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-25T11:12:12.738399" elapsed="0.003455"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-25T11:12:12.742862" elapsed="0.001225"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-25T11:12:12.744412" elapsed="0.000729"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-25T11:12:12.745407" elapsed="0.000508"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-02-25T11:12:12.746112" elapsed="0.000483"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2026-02-25T11:12:12.747455" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2026-02-25T11:12:12.747029" elapsed="3.535716"/>
+</kw>
+<doc>Configure et ouvre Chrome en mode Headless pour Docker</doc>
+<status status="PASS" start="2026-02-25T11:12:12.734223" elapsed="3.550259"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-25T11:12:16.288977" level="INFO">Opening url 'https://the-internet.herokuapp.com/login'</msg>
+<arg>https://the-internet.herokuapp.com/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-25T11:12:16.286370" elapsed="0.113059"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-25T11:12:16.402329" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-25T11:12:16.400217" elapsed="0.445456"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-25T11:12:16.847314" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-25T11:12:16.846371" elapsed="0.298606"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-25T11:12:17.147447" level="INFO">Clicking button 'css:button[type="submit"]'.</msg>
+<arg>css:button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-25T11:12:17.146019" elapsed="1.138165"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-25T11:12:18.371886" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="20260225_111208-0-capture_apres_click.png"&gt;&lt;img src="20260225_111208-0-capture_apres_click.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>capture_apres_click.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-25T11:12:18.285660" elapsed="0.086757"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-25T11:12:18.470238" level="INFO">Current page contains text 'You logged into a secure area!'.</msg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-25T11:12:18.373570" elapsed="0.097493"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-25T11:12:18.473624" elapsed="0.076714"/>
+</kw>
+<doc>Test de connexion complet compatible Docker</doc>
+<status status="PASS" start="2026-02-25T11:12:12.729368" elapsed="5.821305"/>
+</test>
+<status status="PASS" start="2026-02-25T11:12:12.008000" elapsed="5.821000"/>
+</suite>
+<status status="PASS" start="2026-02-25T11:12:12.003000" elapsed="5.821000"/>
+</suite>
+<status status="PASS" start="2026-02-25T11:12:11.827000" elapsed="5.821000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Tests.Tests</stat>
+<stat name="Login Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Tests.Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

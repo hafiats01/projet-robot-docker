@@ -1,0 +1,23 @@
+
+services:
+  robot-runner:
+    # Construit l'image à partir du Dockerfile dans le dossier courant
+    build: .
+    image: mon-robot-pabot-image
+    
+    # Montage des volumes :
+    # 1. Ton code local (.) est accessible dans le conteneur (/tests)
+    # 2. Les rapports de test seront écrits directement sur ton PC
+    volumes:
+      - .:/tests
+    
+    # INDISPENSABLE POUR CHROME :
+    # Augmente la mémoire partagée à 2Go pour éviter les crashs "Session Not Created"
+    # C'est plus propre que de monter /dev/shm
+    shm_size: '2gb'
+    
+    # La commande par défaut :
+    # - Lance 4 processus en parallèle
+    # - Stocke les rapports dans le dossier 'results'
+    # - Exécute tous les tests du dossier
+    command: pabot --processes 4 --outputdir results .

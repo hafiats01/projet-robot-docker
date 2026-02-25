@@ -1,0 +1,12 @@
+# Fichier généré automatiquement par pabot
+.pabotsuitenames
+
+# Environnements Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Fichiers système
+.DS_Store
+Thumbs.db
