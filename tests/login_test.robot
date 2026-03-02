@@ -17,8 +17,7 @@ Ouvrir Chrome Pour Docker
 
 *** Test Cases ***
 Connexion Reussie a The-Internet
-    [Documentation]    Test de connexion complet compatible Docker
-    
+    [Documentation]    Test de connexion complet compatible Docker.   
     # 1. Ouverture du navigateur
     Ouvrir Chrome Pour Docker
     Go To    https://the-internet.herokuapp.com/login
