@@ -25,6 +25,9 @@ Connexion Reussie a The-Internet
     # 2. Remplissage du formulaire (avec les bons identifiants)
     Input Text      id=username    tomsmith
     Input Text      id=password    SuperSecretPassword!
+
+    # Capture après la saisie des identifiants
+    Capture Page Screenshot    capture_apres_click.png
     
     # 3. Validation
     Click Button    css:button[type="submit"]
