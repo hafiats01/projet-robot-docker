@@ -21,13 +21,16 @@ Connexion Reussie a The-Internet
     # 1. Ouverture du navigateur
     Ouvrir Chrome Pour Docker
     Go To    https://the-internet.herokuapp.com/login
+
+     # Capture après la navigation vers la page de login
+    Capture Page Screenshot    capture_apres_navigation.png
     
     # 2. Remplissage du formulaire (avec les bons identifiants)
     Input Text      id=username    tomsmith
     Input Text      id=password    SuperSecretPassword!
 
     # Capture après la saisie des identifiants
-    Capture Page Screenshot    capture_apres_click.png
+    Capture Page Screenshot    capture_apres_saisie.png
     
     # 3. Validation
     Click Button    css:button[type="submit"]
